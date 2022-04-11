@@ -1,0 +1,15 @@
+{
+    "name": "mathsgod/graphqlite-laminas-paginator-type",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raymond Chong",
+            "email": "mathsgod@yahoo.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "thecodingmachine/graphqlite": "^5.0"
+    }
+}
