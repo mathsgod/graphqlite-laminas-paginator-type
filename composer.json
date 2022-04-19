@@ -1,6 +1,12 @@
 {
     "name": "mathsgod/graphqlite-laminas-paginator-type",
     "type": "library",
+    "keywords": [
+        "graphql",
+        "paginator",
+        "type",
+        "laminas"
+    ],
     "license": "MIT",
     "authors": [
         {
