@@ -11,8 +11,6 @@ use Laminas\Paginator\Paginator;
 use RuntimeException;
 use TheCodingMachine\GraphQLite\FactoryContext;
 use TheCodingMachine\GraphQLite\Mappers\CannotMapTypeException;
-use TheCodingMachine\GraphQLite\Mappers\PorpaginasMissingParameterException;
-use TheCodingMachine\GraphQLite\Mappers\RecursiveTypeMapperInterface;
 use TheCodingMachine\GraphQLite\Mappers\TypeMapperInterface;
 use TheCodingMachine\GraphQLite\Types\MutableInterface;
 use TheCodingMachine\GraphQLite\Types\MutableInterfaceType;
@@ -62,7 +60,7 @@ class TypeMapper implements TypeMapperInterface
             throw CannotMapTypeException::createForType($className);
         }
         if ($subType === null) {
-            throw PorpaginasMissingParameterException::noSubType();
+            throw MissingParameterException::noSubType();
         }
 
         return $this->getObjectType($subType);
@@ -101,7 +99,7 @@ class TypeMapper implements TypeMapperInterface
                             ],
                             'resolve' => static function (Paginator $root, $args) {
                                 if (!isset($args['limit']) && isset($args['offset'])) {
-                                    throw PorpaginasMissingParameterException::missingLimit();
+                                    throw MissingParameterException::missingLimit();
                                 }
                                 if (isset($args['limit'])) {
 

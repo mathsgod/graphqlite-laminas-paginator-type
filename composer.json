@@ -10,6 +10,7 @@
     ],
     "require": {},
     "require-dev": {
-        "thecodingmachine/graphqlite": "^5.0"
+        "thecodingmachine/graphqlite": "^5.0",
+        "laminas/laminas-paginator": "^2.12"
     }
 }

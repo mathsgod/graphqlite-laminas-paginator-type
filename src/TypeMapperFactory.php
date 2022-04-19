@@ -11,6 +11,6 @@ class TypeMapperFactory implements TypeMapperFactoryInterface
 
     public function create(FactoryContext $context): TypeMapperInterface
     {
-        return new PaginationTypeMapper($context);
+        return new TypeMapper($context);
     }
 }
