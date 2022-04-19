@@ -102,10 +102,11 @@ class TypeMapper implements TypeMapperInterface
                                     throw MissingParameterException::missingLimit();
                                 }
                                 if (isset($args['limit'])) {
-
                                     $root->setItemCountPerPage($args['limit']);
-                                    return $root->getItemsByPage(1);
-                                    //return $root->take($args['offset'] ?? 0, $args['limit']);
+                                }
+
+                                if ($args["offset"]) {
+                                    return $root->getAdapter()->getItems($args["offset"], $args['limit']);
                                 }
 
                                 return $root;
