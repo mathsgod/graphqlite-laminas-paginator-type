@@ -12,5 +12,11 @@
     "require-dev": {
         "thecodingmachine/graphqlite": "^5.0",
         "laminas/laminas-paginator": "^2.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laminas\\Paginator\\Mappers\\": "src"
+        }
+
     }
 }
