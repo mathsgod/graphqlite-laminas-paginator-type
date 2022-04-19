@@ -1,6 +1,17 @@
 # graphqlite-laminas-paginator-type
 
-## example
+## Setup
+```php
+use Laminas\Paginator\Mappers\TypeMapperFactory;
+use TheCodingMachine\GraphQLite\SchemaFactory;
+
+$factory = new SchemaFactory($cache, $container);
+$factory->addTypeMapperFactory(new TypeMapperFactory); // add type mapper
+
+```
+        
+
+## Example
 ```php
 //Controller class
 class Root{
