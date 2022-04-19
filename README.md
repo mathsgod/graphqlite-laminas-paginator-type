@@ -9,8 +9,7 @@ class Root{
      * @return Product[]
      */
     function products():Paginator{
-        // after load product array
-        // return the products paginator
+        //get the products paginator
         return $paginator;
     }
 }
